@@ -1,6 +1,31 @@
 module tcm.colours;
 import std.string;
 
+string black(string s){return "\u001b[30m"~s~"\u001b[0m";}
+string red(string s){return "\u001b[31m"~s~"\u001b[0m";}
+string green(string s){return "\u001b[32m"~s~"\u001b[0m";}
+string yellow(string s){return "\u001b[33m"~s~"\u001b[0m";}
+string blue(string s){return "\u001b[34m"~s~"\u001b[0m";}
+string magenta(string s){return "\u001b[35m"~s~"\u001b[0m";}
+string cyan(string s){return "\u001b[36m"~s~"\u001b[0m";}
+string white(string s){return "\u001b[37m"~s~"\u001b[0m";}
+
+string brightblack(string s){return "\u001b[30;1m"~s~"\u001b[0m";}
+string brightred(string s){return "\u001b[31;1m"~s~"\u001b[0m";}
+string brightgreen(string s){return "\u001b[32;1m"~s~"\u001b[0m";}
+string brightyellow(string s){return "\u001b[33;1m"~s~"\u001b[0m";}
+string brightblue(string s){return "\u001b[34;1m"~s~"\u001b[0m";}
+string brightmagenta(string s){return "\u001b[35;1m"~s~"\u001b[0m";}
+string brightcyan(string s){return "\u001b[36;1m"~s~"\u001b[0m";}
+string brightwhite(string s){return "\u001b[37;1m"~s~"\u001b[0m";}
+
+string fg(string s, string id){return "\u001b[38;5;"~id~"m"~s~"\u001b[0m";}
+string bg(string s, string id){return "\u001b[48;5;"~id~"m"~s~"\u001b[0m";}
+
+string bold(string s){return "\u001b[1m"~s~"\u001b[0m";}
+string underline(string s){return "\u001b[4m"~s~"\u001b[0m";}
+string resetfmt(string s){return "\u001b[0m"~s~"\u001b[0m";}
+
 class Colours {
   string black = "\u001b[30m";
   string red = "\u001b[31m";

@@ -9,14 +9,11 @@ class Card{
   string[string] variables;
   override string toString(){return " ["~this.name~" "~this.icon~""~this.suit~"] ";}
 }
-class StandardPlayingCard : Card {
-}
-class TarotNouveau : Card{
-}
-class TarotMinorArcana : Card{
-}
+class StandardPlayingCard : Card {}
+class TarotNouveau : Card{}
+class TarotMinorArcana : Card{}
 class TarotMajorArcana : Card{
-  override string toString(){return " [#"~this.value.to!string~" "~this.name~"] ";}
+override string toString(){return " [#"~this.value.to!string~" "~this.name~"] ";}
 }
 
 class Deck{
@@ -222,7 +219,7 @@ class Deck{
     this.cards = this.cards.remove(0);
     return card;
   }
-  void reshuffle(string pack){
+  void reshuffle(string pack = "standard"){
     this.cards = [];
     this.packs = [];
     this.generatePack(pack);
